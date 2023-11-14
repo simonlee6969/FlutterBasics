@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'second_page/second_page.dart';
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 //StatelessWidget means the screen would never change, all UI remain static
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   //it's a variable, it would make the whole class non-const
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       //homepage set as FirstPage()
       home: FirstPage(),
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class FirstPage extends StatefulWidget {
-  FirstPage({super.key});
+  const FirstPage({super.key});
 
   @override
   State<FirstPage> createState() => _FirstPageState();
